@@ -1,30 +1,30 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { GradientButton } from '@/components/ui/gradient-button';
-import BotAnimation from '@/components/animations/BotAnimation';
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import { GradientButton } from '@/components/ui/gradient-button'
+import BotAnimation from '@/components/animations/BotAnimation'
 
 export default function About() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#1a0b2e]">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b69] to-[#1a0b2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About
-                <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  BudgetFriendly
+                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Metro Solver
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                We believe everyone deserves financial freedom. Our mission is to make 
-                smart budgeting accessible, enjoyable, and effective for people from all walks of life.
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                We believe every business deserves digital excellence. Our mission is to make 
+                professional digital solutions accessible, effective, and budget-friendly for businesses of all sizes.
               </p>
               <GradientButton size="lg">
-                Start Your Journey
+                Discover Our Story
               </GradientButton>
             </div>
             <div className="flex justify-center">
@@ -37,15 +37,15 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Mission
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              To empower individuals and businesses with the tools and insights they need 
-              to achieve their financial dreams and build a secure future.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              To empower businesses with cutting-edge digital solutions that drive growth, 
+              enhance efficiency, and deliver exceptional results.
             </p>
           </div>
 
@@ -56,33 +56,33 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Simplicity</h3>
-              <p className="text-gray-600">
-                Making complex financial concepts easy to understand and act upon.
+              <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+              <p className="text-gray-300">
+                Cutting-edge solutions that keep your business ahead of the competition.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security</h3>
-              <p className="text-gray-600">
-                Your financial data is protected with bank-level security measures.
+              <h3 className="text-xl font-semibold text-white mb-3">Quality</h3>
+              <p className="text-gray-300">
+                Excellence in every project, ensuring your digital presence stands out.
               </p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Empowerment</h3>
-              <p className="text-gray-600">
-                Giving you the tools and confidence to take control of your financial future.
+              <h3 className="text-xl font-semibold text-white mb-3">Partnership</h3>
+              <p className="text-gray-300">
+                Building lasting relationships with our clients through trust and results.
               </p>
             </div>
           </div>
@@ -90,31 +90,31 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="py-20 bg-[#1a0b2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A passionate group of financial experts, designers, and developers 
-              committed to revolutionizing personal finance management.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A passionate team of digital experts, designers, and developers 
+              committed to delivering exceptional results for our clients.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Alex Rivera", role: "CEO & Founder", bio: "Former financial advisor with 10+ years experience helping people achieve their financial goals." },
-              { name: "Jordan Smith", role: "CTO", bio: "Tech entrepreneur passionate about building tools that make a real difference in people's lives." },
-              { name: "Sam Johnson", role: "Head of Design", bio: "UX designer focused on creating intuitive and beautiful financial experiences." }
+              { name: "Sarah Johnson", role: "CEO & Founder", bio: "Digital marketing strategist with 12+ years experience helping businesses grow online." },
+              { name: "Mike Chen", role: "Lead Developer", bio: "Full-stack developer passionate about creating scalable and user-friendly web applications." },
+              { name: "Emma Davis", role: "Creative Director", bio: "Award-winning designer focused on creating stunning visual experiences that convert." }
             ].map((member) => (
-              <div key={member.name} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div key={member.name} className="bg-slate-800/50 rounded-xl p-8 border border-purple-400/30 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300">
                 <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{member.name}</h3>
-                <p className="text-purple-600 text-center mb-4">{member.role}</p>
-                <p className="text-gray-600 text-center">{member.bio}</p>
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>
+                <p className="text-purple-400 text-center mb-4">{member.role}</p>
+                <p className="text-gray-300 text-center">{member.bio}</p>
               </div>
             ))}
           </div>

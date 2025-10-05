@@ -1,100 +1,101 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { GradientButton } from '@/components/ui/gradient-button';
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import Contact from '@/components/Contact'
+import { GradientButton } from '@/components/ui/gradient-button'
 
-export default function Contact() {
+export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#1a0b2e]">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b69] to-[#1a0b2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get in
-              <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Have questions about our services? Need help getting started? 
-              We&apos;d love to hear from you and help you on your financial journey.
+              We&apos;d love to hear from you and help you transform your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+            <div className="bg-slate-800/50 rounded-xl border border-purple-400/30 p-8 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="first-name" className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
                     </label>
                     <input
                       type="text"
                       id="first-name"
                       name="first-name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-purple-400/30 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-white placeholder-gray-400"
                       placeholder="John"
                     />
                   </div>
                   <div>
-                    <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="last-name" className="block text-sm font-medium text-gray-300 mb-2">
                       Last Name
                     </label>
                     <input
                       type="text"
                       id="last-name"
                       name="last-name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-purple-400/30 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-white placeholder-gray-400"
                       placeholder="Doe"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-purple-400/30 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-white placeholder-gray-400"
                     placeholder="john@example.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                     Subject
                   </label>
                   <select
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-purple-400/30 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-white"
                   >
                     <option>General Inquiry</option>
-                    <option>Technical Support</option>
-                    <option>Billing Question</option>
+                    <option>Digital Marketing</option>
+                    <option>Web Development</option>
+                    <option>Graphic Design</option>
                     <option>Partnership Opportunity</option>
-                    <option>Feature Request</option>
                   </select>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
-                    placeholder="Tell us how we can help you..."
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-purple-400/30 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors text-white placeholder-gray-400"
+                    placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
                 
@@ -106,8 +107,8 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+              <div className="bg-slate-800/50 rounded-xl border border-purple-400/30 p-8 backdrop-blur-sm">
+                <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mr-4">
@@ -116,8 +117,8 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Email</p>
-                      <p className="text-gray-600">support@budgetfriendly.com</p>
+                      <p className="font-medium text-white">Email</p>
+                      <p className="text-gray-300">official@metrosolver.com</p>
                     </div>
                   </div>
                   
@@ -128,8 +129,8 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Phone</p>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="font-medium text-white">Phone</p>
+                      <p className="text-gray-300">+447936 455446</p>
                     </div>
                   </div>
                   
@@ -141,49 +142,52 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Address</p>
-                      <p className="text-gray-600">123 Finance Street<br />New York, NY 10001</p>
+                      <p className="font-medium text-white">Address</p>
+                      <p className="text-gray-300">Grantham Road, London E12<br />5LX, United Kingdom</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Office Hours</h3>
+                            <div className="bg-slate-800/50 rounded-xl border border-purple-400/30 p-8 backdrop-blur-sm">
+                <h3 className="text-xl font-semibold text-white mb-6">Office Hours</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-medium text-gray-900">9:00 AM - 6:00 PM EST</span>
+                    <span className="text-gray-300">Monday - Friday</span>
+                    <span className="font-medium text-white">9:00 AM - 6:00 PM GMT</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="font-medium text-gray-900">10:00 AM - 4:00 PM EST</span>
+                    <span className="text-gray-300">Saturday</span>
+                    <span className="font-medium text-white">10:00 AM - 4:00 PM GMT</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-medium text-gray-900">Closed</span>
+                    <span className="text-gray-300">Sunday</span>
+                    <span className="font-medium text-white">Closed</span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white">
-                <h3 className="text-xl font-semibold mb-4">Need Immediate Help?</h3>
+                <h3 className="text-xl font-semibold mb-4">Ready to Start Your Project?</h3>
                 <p className="mb-4 text-purple-100">
-                  Check out our comprehensive help center with FAQs, tutorials, and guides.
+                  Get a free consultation and discover how we can help transform your business with our digital solutions.
                 </p>
                 <GradientButton 
                   variant="secondary" 
                   className="bg-white text-purple-600 hover:bg-gray-50"
                 >
-                  Visit Help Center
+                  Schedule Consultation
                 </GradientButton>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      {/* Contact Component */}
+      <Contact />
 
       <Footer />
     </main>
-  );
+  )
 }
