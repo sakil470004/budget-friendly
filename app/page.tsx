@@ -3,6 +3,8 @@ import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Portfolio from '@/components/Portfolio'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import AboutVideo from '@/components/AboutVideo'
+import HowItWorks from '@/components/HowItWorks'
 import Stats from '@/components/Stats'
 import Testimonials from '@/components/Testimonials'
 import SuccessStories from '@/components/SuccessStories'
@@ -17,7 +19,9 @@ export default function Home() {
       <Services />
       <Portfolio />
       <WhyChooseUs />
-      <Stats />
+      <AboutVideo />
+      <HowItWorks />
+      {/* <Stats /> */}
       <Testimonials />
       <SuccessStories />
       <Contact />
