@@ -54,7 +54,7 @@ export default function Navigation() {
               </div>
             </div>
             <Link 
-              href="/white-label" 
+              href="#" 
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               White label
@@ -136,7 +136,7 @@ export default function Navigation() {
                 Services
               </Link>
               <Link 
-                href="/white-label" 
+                href="#" 
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

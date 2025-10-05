@@ -23,7 +23,7 @@ export default function Footer() {
                 <Link href="/about">About us</Link>
                 <Link href="/team">Our Team</Link>
                 <Link href="/profile">User Profile</Link>
-                <Link href="/white-label">White Labelling</Link>
+                <Link href="#">White Labelling</Link>
               </div>
             </div>
 
