@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Portfolio from '@/components/Portfolio'
+import WhyChooseUs from '@/components/WhyChooseUs'
 import Stats from '@/components/Stats'
 import Testimonials from '@/components/Testimonials'
 import SuccessStories from '@/components/SuccessStories'
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Portfolio />
+      <WhyChooseUs />
       <Stats />
       <Testimonials />
       <SuccessStories />
