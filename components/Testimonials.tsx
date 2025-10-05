@@ -56,7 +56,7 @@ export default function Testimonials() {
   return (
     <section 
       id="testimonials-section" 
-      className="py-20 bg-gradient-to-b from-slate-900 to-purple-900"
+      className="py-20 bg-[#1a0b2e]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

@@ -100,7 +100,7 @@ export default function Services() {
   return (
     <section 
       id="services-section" 
-      className="py-20 bg-gradient-to-b from-slate-900 to-purple-900"
+      className="py-20 bg-[#1a0b2e]"
     >
       {/* Get My 15% OFF Banner */}
       <div className="fixed top-1/2 left-4 transform -translate-y-1/2 z-40">

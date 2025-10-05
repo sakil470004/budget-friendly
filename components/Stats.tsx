@@ -45,7 +45,7 @@ export default function Stats() {
   return (
     <section 
       id="stats-section" 
-      className="py-20 bg-gradient-to-b from-purple-900 to-slate-900"
+      className="py-20 bg-[#1a0b2e]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Grid */}

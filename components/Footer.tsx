@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gradient-to-b from-purple-900 to-slate-900 text-white">
+    <footer className="bg-[#1a0b2e] text-white">
       {/* Newsletter Section */}
       <div className="border-b border-gray-800/50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

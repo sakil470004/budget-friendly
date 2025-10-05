@@ -11,18 +11,34 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a0b2e]">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10" />
       
       {/* Geometric Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-20">
         <svg width="100%" height="100%" viewBox="0 0 1200 800" className="w-full h-full">
-          <path d="M200 400 L400 200 L600 400 L800 200 L1000 400" stroke="url(#gradient)" strokeWidth="2" fill="none" />
+          {/* Wave-like pattern similar to the screenshot */}
+          <path 
+            d="M0 400 Q300 200 600 400 T1200 400 L1200 800 L0 800 Z" 
+            fill="url(#waveGradient)" 
+            opacity="0.3"
+          />
+          <path 
+            d="M0 350 Q300 150 600 350 T1200 350 L1200 800 L0 800 Z" 
+            fill="url(#waveGradient2)" 
+            opacity="0.2"
+          />
           <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#8B5CF6" />
-              <stop offset="100%" stopColor="#06B6D4" />
+              <stop offset="50%" stopColor="#A855F7" />
+              <stop offset="100%" stopColor="#3B82F6" />
+            </linearGradient>
+            <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#3B82F6" />
+              <stop offset="50%" stopColor="#8B5CF6" />
+              <stop offset="100%" stopColor="#A855F7" />
             </linearGradient>
           </defs>
         </svg>
@@ -31,12 +47,12 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Top Banner */}
         <div className="mb-8 flex flex-wrap gap-4 text-sm text-gray-300">
-          <span className="px-3 py-1 bg-purple-800/20 rounded-full">Budget Friendly</span>
-          <span className="px-3 py-1 bg-purple-800/20 rounded-full">No. 1 in Europe</span>
-          <span className="px-3 py-1 bg-red-600 rounded-full text-white">30% OFF</span>
-          <span className="px-3 py-1 bg-purple-800/20 rounded-full">For all products buy now get the offer</span>
-          <span className="px-3 py-1 bg-purple-800/20 rounded-full">User Friendly</span>
-          <span className="px-3 py-1 bg-purple-800/20 rounded-full">24/7 Service</span>
+          <span className="px-3 py-1 bg-purple-900/30 rounded-full">Budget friendly</span>
+          <span className="px-3 py-1 bg-purple-900/30 rounded-full">No. 1 in Europe</span>
+          <span className="px-3 py-1 bg-red-500 rounded-full text-white">30% OFF</span>
+          <span className="px-3 py-1 bg-purple-900/30 rounded-full">For all products buy now get the offer</span>
+          <span className="px-3 py-1 bg-purple-900/30 rounded-full">User Friendly</span>
+          <span className="px-3 py-1 bg-purple-900/30 rounded-full">24/7 Service</span>
         </div>
 
         {/* Main Content */}
@@ -71,6 +87,22 @@ export default function Hero() {
             <div className="text-white text-lg font-medium">luminus</div>
             <div className="text-white text-lg font-medium">brembo</div>
           </div>
+        </div>
+
+        {/* Right Side Geometric M Logo */}
+        <div className="absolute top-1/2 right-8 transform -translate-y-1/2 hidden lg:block">
+          <svg width="200" height="200" viewBox="0 0 200 200" className="opacity-20">
+            <path 
+              d="M40 40 L40 160 L80 120 L120 160 L160 160 L160 40 L120 40 L100 60 L80 40 Z" 
+              fill="url(#logoGradient)" 
+            />
+            <defs>
+              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8B5CF6" />
+                <stop offset="100%" stopColor="#3B82F6" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
         {/* Chat Bot */}
