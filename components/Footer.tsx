@@ -17,7 +17,7 @@ export default function Footer() {
             {/* Company */}
             <div>
               <h4 className="font-semibold text-lg mb-6">Company</h4>
-              <div className="space-y-3">
+              <div className="flex flex-col space-y-3">
                 <Link href="/">Home</Link>
                 <Link href="/about">About us</Link>
                 <Link href="/team">Our Team</Link>
@@ -29,7 +29,7 @@ export default function Footer() {
             {/* About Us */}
             <div>
               <h4 className="font-semibold text-lg mb-6">About Us</h4>
-              <div className="space-y-3">
+              <div className="flex flex-col space-y-3">
                 <Link href="/stories">Our Stories</Link>
                 <Link href="/career">Career</Link>
                 <Link href="/message">Send Message</Link>
@@ -40,29 +40,23 @@ export default function Footer() {
             {/* Support */}
             <div>
               <h4 className="font-semibold text-lg mb-6">Support</h4>
-              <div className="space-y-3">
+              <div className="space-y-3 flex flex-col">
                 <Link href="/help">Help Center</Link>
                 <Link href="/contact">Contact Us</Link>
                 <Link href="/privacy">Privacy Policy</Link>
                 <Link href="/terms">Terms and Conditions</Link>
-                <Link href="/earning">Start Earning</Link>
               </div>
             </div>
 
             {/* Services */}
             <div>
               <h4 className="font-semibold text-lg mb-6">Services</h4>
-              <div className="space-y-3">
+              <div className="space-y-3 flex flex-col">
                 <Link href="/digital-marketing">Digital Marketing</Link>
                 <Link href="/creative-writing">Creative Writing Solution</Link>
                 <Link href="/web-development">Web & Software Development</Link>
                 <Link href="/ecommerce">E-Commerce Solution</Link>
-                <Link href="/graphic-design">Graphic Design</Link>
-                <Link href="/multimedia">Multimedia & Video Editing</Link>
-                <Link href="/merchandise">Merchandise</Link>
-                <Link href="/premium-website">Premium Website</Link>
-                <Link href="/premium-domains">Premium Domains</Link>
-                <Link href="/special-combo">Special Combo</Link>
+                
               </div>
             </div>
           </div>
@@ -99,15 +93,7 @@ export default function Footer() {
               <span className="font-semibold">Google</span>
               <span className="text-sm text-gray-400">Partner</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-yellow-500 rounded"></div>
-              <span className="font-semibold">amazon spn</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-black rounded"></div>
-              <span className="font-semibold">TikTok</span>
-              <span className="text-sm text-gray-400">Marketing Partners</span>
-            </div>
+            
           </div>
         </div>
       </div>
