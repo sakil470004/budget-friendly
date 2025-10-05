@@ -163,7 +163,7 @@ Professional contact interface:
    ```
 
 4. **Open in browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+   Navigate to [https://budget-friendly-three.vercel.app/](https://budget-friendly-three.vercel.app/)
 
 ### Build for Production
 
@@ -266,7 +266,7 @@ This project is private and proprietary to Metro Solver Ltd.
 ## 📞 Contact
 
 **Metro Solver Ltd**
-- Website: [Project Demo](http://localhost:3000)
+- Website: [Project Demo](https://budget-friendly-three.vercel.app/)
 - Registration: England & Wales No: 15792819
 - GitHub: [@sakil470004](https://github.com/sakil470004)
 
