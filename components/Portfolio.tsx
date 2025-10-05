@@ -190,7 +190,7 @@ export default function Portfolio() {
               Based on the description of Metro Solver and the image provided, here is a
             </p>
             <p className="text-lg text-gray-300">
-              6-step process that Metro Solver uses to scale a customer's business
+              6-step process that Metro Solver uses to scale a customer&apos;s business
             </p>
           </div>
         </div>

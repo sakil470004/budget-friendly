@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Lottie from 'lottie-react';
 
 interface LottiePlayerProps {
-  animationData: any;
+  animationData: object;
   className?: string;
   loop?: boolean;
   autoplay?: boolean;

@@ -80,7 +80,7 @@ export default function StatsSection() {
         
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className={`
