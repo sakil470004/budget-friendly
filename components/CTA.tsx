@@ -1,67 +1,103 @@
-'use client';
+'use client'
 
-import { GradientButton } from './ui/gradient-button';
+import { useState, useEffect } from 'react'
+import { GradientButton } from './ui/gradient-button'
+import BotAnimation from './animations/BotAnimation'
 
-const CTA = () => {
+export default function CTA() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('cta-section')
+    if (element) observer.observe(element)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full filter blur-3xl"></div>
-      
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Ready to Transform
-          <span className="block">Your Financial Future?</span>
-        </h2>
-        
-        <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
-          Join thousands of users who have already started their journey to financial freedom. 
-          Your dreams are waiting - let&apos;s make them happen together.
-        </p>
+    <section 
+      id="cta-section" 
+      className="relative py-20 overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-purple-900"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-3xl" />
+      <div className="absolute top-10 left-10 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
+      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" />
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <GradientButton 
-            variant="secondary" 
-            size="lg" 
-            className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-50"
-          >
-            Start Free Trial
-          </GradientButton>
-          <GradientButton 
-            variant="outline" 
-            size="lg" 
-            className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-purple-600"
-          >
-            Schedule Demo
-          </GradientButton>
-        </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          
+          {/* Bot Animation */}
+          <div className="flex justify-center mb-8">
+            <div className="w-24 h-24 md:w-32 md:h-32">
+              <BotAnimation />
+            </div>
+          </div>
 
-        {/* Trust indicators */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-purple-200">
-          <div className="flex items-center space-x-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>No Credit Card Required</span>
+          {/* Main CTA Content */}
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Transform Your Financial
+            <span className="block bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+              Dreams into Success Stories
+            </span>
+          </h2>
+
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Join thousands of entrepreneurs and dreamers who have unlocked their financial potential. 
+            From business growth to personal success - start your journey today.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <GradientButton size="lg" className="min-w-[250px] text-lg">
+              Begin Your Success Story
+            </GradientButton>
+            <button className="px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 min-w-[250px] backdrop-blur-sm">
+              Explore Business Features
+            </button>
           </div>
-          <div className="flex items-center space-x-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>14-Day Free Trial</span>
+
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {[
+              { label: 'Business Success Stories', value: '5,000+', icon: '🏆' },
+              { label: 'Dreams Turned Reality', value: '$10M+', icon: '💰' },
+              { label: 'Average Growth Rate', value: '300%', icon: '📈' },
+              { label: 'Potential Unlocked', value: '98%', icon: '⚡' }
+            ].map((stat, index) => (
+              <div 
+                key={index} 
+                className={`text-center transition-all duration-700 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+              >
+                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300 text-sm md:text-base">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex items-center space-x-2">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>Cancel Anytime</span>
+
+          {/* Bottom Message */}
+          <div className={`mt-12 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              🎯 <strong>Ready to unlock your potential?</strong> Start with our free plan and upgrade as your business grows.
+            </p>
           </div>
         </div>
       </div>
     </section>
-  );
-};
-
-export default CTA;
+  )
+}
